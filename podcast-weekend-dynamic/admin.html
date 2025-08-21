@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel admina – Podcast Weekend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="header">
+  <div class="container bar">
+    <a class="logo" href="index.html"><img src="assets/img/logo.svg" width="36" height="36" alt=""/> <span>Podcast <strong>Weekend</strong> – Admin</span></a>
+    <button class="nav-toggle" style="display:none"></button>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Panel admina (ukryty)</h1>
+
+    <div class="card" id="login-box">
+      <h3>Logowanie</h3>
+      <form id="login-form">
+        <input type="text" placeholder="Login" id="login" required />
+        <input type="password" placeholder="Hasło" id="password" required />
+        <button class="btn" type="submit">Zaloguj</button>
+        <p class="small">Podpowiedź: login <strong>123</strong>, hasło <strong>123</strong></p>
+      </form>
+    </div>
+
+    <div class="card" id="admin-box" style="display:none">
+      <h3>Dodaj artykuł na blog</h3>
+      <form id="admin-post-form">
+        <label class="small">Zdjęcie do okienka (URL)</label>
+        <input type="url" id="cover" placeholder="https://..." />
+        <label class="small">Tytuł na okienku (kaflu)</label>
+        <input type="text" id="tileTitle" placeholder="Krótki tytuł" required />
+        <label class="small">Nagłówek artykułu (H1)</label>
+        <input type="text" id="header" placeholder="Pełny nagłówek" required />
+        <label class="small">Treść artykułu (HTML – wklejone treści zostaną oczyszczone z własnych czcionek/rozmiarów)</label>
+        <textarea id="content" placeholder="<p>Twoja treść...</p>" required></textarea>
+        <button class="btn" type="submit">Zapisz artykuł</button>
+        <button class="btn link" id="logout" type="button">Wyloguj</button>
+      </form>
+      <p class="small">Uwaga: zawartość trzymana lokalnie w przeglądarce (localStorage). Aby udostępnić publicznie, dodaj prosty backend (np. Cloudflare Workers + D1/KV) i podmień funkcje get/set.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container section">
+    <p class="small">© 2025 Podcast Weekend</p>
+  </div>
+</footer>
+<script src="assets/js/blog.js"></script>
+</body>
+</html>

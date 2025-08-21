@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog – Podcast Weekend</title>
+  <meta name="description" content="Podcast Weekend – wypożyczalnia sprzętu podcastowego na weekend" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="Podcast Weekend - Start">
+      <img src="assets/img/logo.svg" alt="" width="36" height="36"/>
+      <span>Podcast <strong>Weekend</strong></span>
+    </a>
+    
+    <nav class="nav" aria-label="Główne">
+      <a href="index.html" >Start</a>
+      <a href="offer.html" >Oferta</a>
+      <a href="pricing.html" >Cennik</a>
+      <a href="howto.html" >Instrukcja</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="contact.html" >Kontakt</a>
+    </nav>
+    
+    <button class="nav-toggle" aria-label="Otwórz menu">
+      <span>Menu</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#1C1C3C" stroke-width="2"/></svg>
+    </button>
+  </div>
+</header>
+<section class="section">
+  <div class="container">
+    <h1>Blog podcastowy</h1>
+    <p>Dla początkujących i nie tylko – porady, inspiracje, trendy.</p>
+    <div class="blog-grid" style="margin-top:18px">
+      <article class="blog-card">
+        <img src="assets/img/hero.jpg" alt="Jak nagrać podcast w domu" />
+        <div class="body">
+          <h3>Jak nagrać podcast w domu – prosta lista kroków</h3>
+          <p>Od wyboru miejsca, przez ustawienia mikrofonu, po eksport do MP3.</p>
+          <a class="cta" href="article-1.html">Czytaj</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <img src="assets/img/hero.jpg" alt="Zestawy podcastowe" />
+        <div class="body">
+          <h3>Jaki zestaw wybrać: Start vs PRO vs Team</h3>
+          <p>Krótko o różnicach, dla kogo który zestaw i jak dopasować budżet.</p>
+          <a class="cta" href="article-2.html">Czytaj</a>
+        </div>
+      </article>
+    </div>
+
+    <h2 style="margin-top:36px">Artykuły dodane przez panel admina</h2>
+    <div id="blog-cards-dynamic" class="blog-grid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container section">
+    <div class="cols">
+      <div>
+        <div class="logo"><img src="assets/img/logo.svg" width="28" height="28" alt=""/> <strong>Podcast Weekend</strong></div>
+        <p class="small">Pierwsza w Polsce wypożyczalnia sprzętu podcastowego „na weekend”. Gotowe zestawy + instrukcja + wsparcie.</p>
+        <p class="small">ul. Nowoczesna 12, 00-123 Warszawa</p>
+        <p class="small">tel. <a href="tel:+48500123456">+48 500 123 456</a> · <a href="mailto:kontakt@podcastweekend.pl">kontakt@podcastweekend.pl</a></p>
+      </div>
+      <div>
+        <h4>Nawigacja</h4>
+        <p><a href="offer.html">Oferta</a><br/>
+        <a href="pricing.html">Cennik</a><br/>
+        <a href="howto.html">Instrukcja</a><br/>
+        <a href="blog.html">Blog</a><br/>
+        <a href="contact.html">Kontakt</a></p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <p>
+          <a href="#" aria-label="Instagram">Instagram</a><br/>
+          <a href="#" aria-label="TikTok">TikTok</a><br/>
+          <a href="#" aria-label="YouTube Shorts">YouTube Shorts</a>
+        </p>
+        <h4>Newsletter</h4>
+        <form id="newsletter-form">
+          <!-- Zamień na osadzony formularz MailerLite/Brevo. -->
+          <input type="email" placeholder="Twój e-mail" required />
+          <button class="btn secondary" type="submit">Zapisz się</button>
+          <p class="notice small">Zapisując się, akceptujesz naszą politykę prywatności.</p>
+        </form>
+      </div>
+    </div>
+    <p class="small" style="margin-top:24px">© 2025 Podcast Weekend</p>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/blog.js"></script>
+</body>
+</html>

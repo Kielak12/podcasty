@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt i rezerwacja – Podcast Weekend</title>
+  <meta name="description" content="Podcast Weekend – wypożyczalnia sprzętu podcastowego na weekend" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="header">
+  <div class="container bar">
+    <a class="logo" href="index.html" aria-label="Podcast Weekend - Start">
+      <img src="assets/img/logo.svg" alt="" width="36" height="36"/>
+      <span>Podcast <strong>Weekend</strong></span>
+    </a>
+    
+    <nav class="nav" aria-label="Główne">
+      <a href="index.html" >Start</a>
+      <a href="offer.html" >Oferta</a>
+      <a href="pricing.html" >Cennik</a>
+      <a href="howto.html" >Instrukcja</a>
+      <a href="blog.html" >Blog</a>
+      <a href="contact.html" aria-current="page">Kontakt</a>
+    </nav>
+    
+    <button class="nav-toggle" aria-label="Otwórz menu">
+      <span>Menu</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#1C1C3C" stroke-width="2"/></svg>
+    </button>
+  </div>
+</header>
+<section class="section" id="rezerwacja">
+  <div class="container grid grid-2">
+    <div>
+      <h1>Kontakt & rezerwacja</h1>
+      <p>Masz pytania? Napisz lub zadzwoń. Rezerwacje realizujemy online – potwierdzenie otrzymasz na e‑mail.</p>
+      <div class="card">
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <!-- Uwaga: Podmień action na własny endpoint Formspree / Brevo / MailerLite -->
+          <input type="text" name="name" placeholder="Imię i nazwisko" required />
+          <input type="email" name="email" placeholder="E‑mail" required />
+          <input type="tel" name="phone" placeholder="Numer telefonu" required />
+          <input type="text" name="address" placeholder="Adres (do dostawy/odbioru)" required />
+          <label class="small">Termin wypożyczenia</label>
+          <input type="date" name="date_from" required />
+          <input type="date" name="date_to" required />
+          <label class="small">Wybór zestawu</label>
+          <select name="set">
+            <option>1 – Weekend Start</option>
+            <option>2 – Weekend PRO</option>
+            <option>3 – Weekend Team</option>
+            <option>4 – Inny / nie wiem</option>
+          </select>
+          <textarea name="notes" placeholder="Dodatkowe uwagi"></textarea>
+          <button type="submit" class="btn">Wyślij rezerwację</button>
+          <p class="small">Wysyłając formularz akceptujesz politykę prywatności.</p>
+        </form>
+      </div>
+    </div>
+    <div>
+      <h3>Dane kontaktowe</h3>
+      <p>ul. Nowoczesna 12, 00-123 Warszawa<br/>tel. <a href="tel:+48500123456">+48 500 123 456</a><br/>e‑mail: <a href="mailto:kontakt@podcastweekend.pl">kontakt@podcastweekend.pl</a></p>
+      <div class="card">
+        <h4>Mapa</h4>
+        <iframe title="Mapa biura" src="https://www.google.com/maps?q=Nowoczesna%2012%20Warszawa&output=embed" width="100%" height="260" style="border:0;border-radius:14px"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container section">
+    <div class="cols">
+      <div>
+        <div class="logo"><img src="assets/img/logo.svg" width="28" height="28" alt=""/> <strong>Podcast Weekend</strong></div>
+        <p class="small">Pierwsza w Polsce wypożyczalnia sprzętu podcastowego „na weekend”. Gotowe zestawy + instrukcja + wsparcie.</p>
+        <p class="small">ul. Nowoczesna 12, 00-123 Warszawa</p>
+        <p class="small">tel. <a href="tel:+48500123456">+48 500 123 456</a> · <a href="mailto:kontakt@podcastweekend.pl">kontakt@podcastweekend.pl</a></p>
+      </div>
+      <div>
+        <h4>Nawigacja</h4>
+        <p><a href="offer.html">Oferta</a><br/>
+        <a href="pricing.html">Cennik</a><br/>
+        <a href="howto.html">Instrukcja</a><br/>
+        <a href="blog.html">Blog</a><br/>
+        <a href="contact.html">Kontakt</a></p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <p>
+          <a href="#" aria-label="Instagram">Instagram</a><br/>
+          <a href="#" aria-label="TikTok">TikTok</a><br/>
+          <a href="#" aria-label="YouTube Shorts">YouTube Shorts</a>
+        </p>
+        <h4>Newsletter</h4>
+        <form id="newsletter-form">
+          <!-- Zamień na osadzony formularz MailerLite/Brevo. -->
+          <input type="email" placeholder="Twój e-mail" required />
+          <button class="btn secondary" type="submit">Zapisz się</button>
+          <p class="notice small">Zapisując się, akceptujesz naszą politykę prywatności.</p>
+        </form>
+      </div>
+    </div>
+    <p class="small" style="margin-top:24px">© 2025 Podcast Weekend</p>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
